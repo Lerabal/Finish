@@ -1,4 +1,5 @@
-﻿int GetUserData(string message)
+﻿Console.Clear();
+int GetUserData(string message)
 {
     Console.ForegroundColor = ConsoleColor.Yellow;
     Console.WriteLine(message);
