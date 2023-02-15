@@ -17,10 +17,33 @@ string[] AddArray(int size)
     }
     return arr1;
 }
+void GetSecondArray(string[] array, string[] array2)
+{
+    int count = 0;
+    for (int i = 0; i < array.Length; i++)
+    {
+    if(array[i].Length <= 3)
+        {
+        array2[count] = array[i];
+        count++;
+        }
+    }
+}
+void PrintArray(string[] array)
+{
+    Console.WriteLine($"Массив строк, длина которых меньше либо равна трем:"); 
+    for (int i = 0; i < array.Length; i++)
+    {
+        Console.Write($"{array[i]} ");
+    }
+    Console.WriteLine();
+}
 
 int size = GetUserData("Введите количество элементов массива: ");
 string[] array = AddArray(size);
-
+string[] array2 = new string[array.Length];
+GetSecondArray(array, array2);
+PrintArray(array2);
 
 
 
